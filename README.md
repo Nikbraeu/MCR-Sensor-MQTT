@@ -17,4 +17,5 @@ Hinweise und Ausblick
 Die Sensor-Komponente ist modular aufgebaut und so konzipiert, dass zukünftige Erweiterungen problemlos umgesetzt werden können. Dazu zählen beispielsweise zusätzliche Sensoren, neue Kommunikationsfunktionen oder eine erweiterte Fehlerauswertung. Der Betrieb ist sowohl stationär als auch mobil möglich, da das System für den Einsatz mit einer Akkustromversorgung ausgelegt ist. Um den Energieverbrauch zu minimieren, ist ein Energiemanagement vorgesehen, das unter anderem den Einsatz von Sleep-Modi ermöglicht.
 
 Autor
+
 Niklas Bräu
