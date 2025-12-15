@@ -556,10 +556,6 @@ lib_deps =
     knolleary/PubSubClient @ ^2.8
     bblanchon/ArduinoJson @ ^6
     adafruit/Adafruit BME280 Library
-    adafruit/Adafruit Unified Sensor
-
-build_flags =
-    -D CORE_DEBUG_LEVEL=3
 ```
 
 ### 9.3 CSV-Beispieldaten
