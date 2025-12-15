@@ -93,13 +93,13 @@ Laufzeit = 2600 mAh / 0.27 mAh/h ≈ 9630 h ≈ 401 Tage
 
 | State             | Beschreibung                    | LED Grün       | LED Rot        | Timeout    |
 |-------------------|---------------------------------|----------------|----------------|------------|
-| `INIT`            | Systeminitialisierung           | Blinkt langsam | Aus            | -          |
-| `NORMAL`          | Normalbetrieb, Messungen aktiv  | An             | Aus            | -          |
-| `CONFIG_MANUAL`   | Manueller Konfigurationsmodus   | An             | Blinkt langsam | 5 min      |
-| `ERROR_WIFI`      | WiFi-Verbindungsfehler          | Aus            | Blinkt schnell | Auto-Retry |
-| `ERROR_MQTT`      | MQTT-Verbindungsfehler          | Blinkt schnell | An             | Auto-Retry |
-| `ERROR_OTHER`     | Sensor-/SD-Fehler               | Aus            | An             | 10 min     |
-| `DEEP_SLEEP_ONLY` | Notfall-Sleep (nur Reset weckt) | Aus            | Aus            | ∞          |
+| `STATE_INIT`            | Systeminitialisierung           | Blinkt langsam | Aus            | -          |
+| `STATE_NORMAL`          | Normalbetrieb, Messungen aktiv  | An             | Aus            | -          |
+| `STATE_CONFIG_MANUAL`   | Manueller Konfigurationsmodus   | An             | Blinkt langsam | 5 min      |
+| `STATE_ERROR_WIFI`      | WiFi-Verbindungsfehler          | Aus            | Blinkt schnell | Auto-Retry |
+| `STATE_ERROR_MQTT`      | MQTT-Verbindungsfehler          | Blinkt schnell | An             | Auto-Retry |
+| `STATE_ERROR_OTHER`     | Sensor-/SD-Fehler               | Aus            | An             | 10 min     |
+| `STATE_DEEP_SLEEP_ONLY` | Notfall-Sleep (nur Reset weckt) | Aus            | Aus            | ∞          |
 
 ### 3.2 Programmstruktur
 
