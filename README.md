@@ -199,9 +199,9 @@ bool connectWiFi(uint32_t timeoutMs = 15000) {
   - Retained: Ja (Status + State Topics)
 
 **Topics:**
-- smarthome/senderlukas/status   → "online"/"offline" (retained)
-- smarthome/senderlukas/state    → JSON System-Status (retained)
-- smarthome/senderlukas/env      → JSON Messdaten
+- smarthome/sender/status   → "online"/"offline" (retained)
+- smarthome/sender/state    → JSON System-Status (retained)
+- smarthome/sender/env      → JSON Messdaten
 
 **TLS-Zertifikat:**
 
