@@ -578,25 +578,24 @@ State:
 ```json
 {
   "state": "NORMAL",
-  "timestamp": 1732972800,
-  "description": "Normalbetrieb aktiv",
-  "sleep_enabled": true,
-  "sleep_interval_sec": 60,
-  "wifi_connected": true,
-  "mqtt_connected": true,
-  "sd_ok": true,
-  "sensor_ok": true
+  "ts": 1765825607,
+  "wifi": true,
+  "mqtt": true,
+  "sd": true,
+  "sensor": true,
+  "sleep": true,
+  "interval": 60
 }
 ```
 
 Environment (env):
 ```json
 {
-  "temperature_C": 22.34,
-  "humidity_%": 64.21,
-  "pressure_hPa": 1013.45,
-  "timestamp": 1732972800,
-  "iso8601": "2025-11-30T14:20:00+01:00"
+  "datetime": "2025-12-15T20:07:00+01:00",
+  "ts": 1765825620,
+  "temp": 26.04000092,
+  "hum": 46.94628906,
+  "pres": 984.7366943
 }
 ```
 
