@@ -89,39 +89,6 @@ Laufzeit = 2600 mAh / 0.27 mAh/h ≈ 9630 h ≈ 401 Tage
 
 ### 3.1 State Machine
 
-**Das System basiert auf einer State Machine mit 7 Zuständen:**
-```
-                           ┌───────────────┐
-         ┌─────────────────│   STATE_INIT  │──────────────┐
-         │                 └───────────────┘              │
-         │ WiFi/MQTT i.O.                                 │ Taster wurde gedrückt
-         │ SD/Sensor i.O.                                 │
-         ▼                                                ▼
-┌──────────────────┐                             ┌──────────────────┐
-│                  │ Taster wurde gedrückt       │                  │
-│                  │────────────────────────────►│                  │
-│   STATE_NORMAL   │◄────────────────────────────│   STATE_CONFIG   │
-│                  │ Taster wurde gedrückt/      │                  │
-│                  │ Reset ausgelöst             │                  │
-└────┬─────┬───────┘                             └──────────────────┘
-     │     │
-Error│     │Timeout
-     │     │
-┌────▼─────▼───────────────────────────────┐
-│ STATE_ERROR_WIFI / _MQTT / _OTHER        │
-└────┬──────────────────────────────┬──────┘
-     │                              │
-     │ Recovery                     │ 10min Timeout
-     │                              │
-     └──────────────────────────────┼─────────┐
-                                    ▼         │
-                          ┌──────────────────┐│
-                          │ STATE_DEEP_SLEEP ││
-                          │     _ONLY        ││
-                          └──────────────────┘│
-                                    │         │
-                                    └─────────┘
-```
 **Zustandsbeschreibungen:**
 
 | State             | Beschreibung                    | LED Grün       | LED Rot        | Timeout    |
