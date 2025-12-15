@@ -1,11 +1,16 @@
 // Gleicher Inhalt wie template, aber mit echten Werten.
 #pragma once
-static const char* WIFI_SSID = "Pixel";            
-// WLAN-SSID Daheim: LordVoldemodem Gast | Handy: Pixel
-static const char* WIFI_PASS = "2f93nfenmueqp74"; 
-// WLAN-PW Daheim: FunktionierESP32 | Handy: 2f93nfenmueqp74
-static const char* CLOUD_HOST = "h2a8a107.ala.eu-central-1.emqxsl.com"; 
+static const char* DEFAULT_WIFI_SSID = "Default_SSID";
+static const char* DEFAULT_WIFI_PASS = "Default_Passwort";
+
+static const char* DEFAULT_MQTT_HOST = "default.emqxsl.com";
 // mit //mqtts:
-static const uint16_t CLOUD_PORT = 8883;
-static const char* CLOUD_USER = "dein Zugang";
-static const char* CLOUD_PASS = "dein Passwort";
+static const uint16_t DEFAULT_MQTT_PORT = 8883;
+static const char* DEFAULT_MQTT_USER = "Default_User";
+static const char* DEFAULT_MQTT_PASS = "Default_Passwort";
+
+static const char ROOT_CA[] PROGMEM = R"PEM(
+-----BEGIN CERTIFICATE-----
+[DigiCert Global Root CA]
+-----END CERTIFICATE-----
+)PEM";
