@@ -216,11 +216,11 @@ mqtt.connect(clientId, mqttUser, mqttPass, "smarthome/senderniklas/status", 0, t
 **JSON-Payload (env):**
 ```json
 {
-  "iso8601": "2025-11-30T14:23:45+01:00"
-  "ts": 1732972425,
-  "temp": 23.45,
-  "hum": 65.32,
-  "pres": 1013.25,
+  "datetime": "2025-12-15T20:07:00+01:00",
+  "ts": 1765825620,
+  "temp": 26.04000092,
+  "hum": 46.94628906,
+  "pres": 984.7366943
 }
 ```
 ### 5.3 BME280 Sensor (I2C)
@@ -239,8 +239,8 @@ bool initSensor() {
 ```
 **Messung:**
 ```cpp
-float temp = bme.readTemperature();  // °C
-float hum = bme.readHumidity();      // %
+float temp = bme.readTemperature();        // °C
+float hum = bme.readHumidity();            // %
 float pres = bme.readPressure() / 100.0F;  // hPa
 ```
 ### 5.4 SD-Karten-Logger
@@ -450,7 +450,7 @@ WiFi.disconnect(true);
 ```
 ### 7.2 Problem: Minutensynchronisation
 **Herausforderung:**
-Messungen sollten genau zur vollen Minute erfolgen (12:21:00, 12:22:00), nicht versetzt.
+Messungen sollten genau zur vollen Minute erfolgen (z.B. 12:21:00, 12:22:00, etc.), nicht versetzt.
 
 **Lösung:**
 Dynamische Sleep-Zeit-Berechnung:
